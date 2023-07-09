@@ -1,6 +1,6 @@
 # Introdução
 
-Bem-vindo(a) ao meu projeto de portfólio na área de Ciência de Dados! Neste trabalho, tenho o prazer de apresentar um projeto que realizei utilizando uma base de dados encontrada no Kaggle sobre carros e esses dados podem ser encontrados através do seguinte link: <a href="https://www.kaggle.com/datasets/lepchenkov/usedcarscatalog">Carros usados</a>
+Bem-vindo(a) ao meu projeto de portfólio na área de Ciência de Dados! Neste trabalho, tenho o prazer de apresentar um projeto que realizei utilizando uma base de dados encontrada no Kaggle sobre carros e esses dados podem ser encontrados através do seguinte link: <a href="https://www.kaggle.com/datasets/lepchenkov/usedcarscatalog" target="_blank">Carros usados</a>
 
 A base de dados foi obtida por meio de web scraping em concessionárias localizadas na Bielorrússia. Ela contém informações detalhadas sobre vários veículos, incluindo diversos atributos tais como quilometragem rodada, estado do veículo, ano de fabricação, cor do veículo, fabricante e entre muitos outros atributos. Nosso objetivo principal é desenvolver um modelo de predição capaz de aprender os padrões presentes nesses dados e fornecer estimativas precisas dos preços dos veículos com base em suas características.
 

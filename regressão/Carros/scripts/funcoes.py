@@ -1,11 +1,13 @@
-
-from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error, mean_squared_log_error
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 
+from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error, mean_squared_log_error
+
+
+
 def validacao(y_true,y_predicted,modelo = None):
-    """Esta função servirá exibir as métricas de validação estabelecidas"""
+    """Exibe as métricas de validação estabelecidas"""
 
     mae = mean_absolute_error(y_true,y_predicted)
 

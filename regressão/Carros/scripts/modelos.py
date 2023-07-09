@@ -2,9 +2,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error, mean_squared_log_error
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
+
+from sklearn.metrics 	     import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error, mean_squared_log_error
+from sklearn.compose 	     import ColumnTransformer
+from sklearn.pipeline 	     import Pipeline
 from sklearn.model_selection import KFold, train_test_split
 
 
@@ -21,11 +22,13 @@ class Modelos:
         self.kf = KFold(n_splits=5) 
 
     def AddModel(self, modelos : list = []) -> None:
+        """Método para adicionar modelos ao objeto a estrutura é uma lista de tuplas onde a tupla segue o seguinte esquema: (nome do modelo, modelo instanciado)"""
         
         for modelo in modelos:
             self.models[modelo[0]] = modelo[1]
 
     def RemoveModel(self, nome: str = None, tipo: str = None) -> None:
+        """Remove modelos do objeto"""
         
         if tipo == 'all':
             self.models=dict()
@@ -35,7 +38,7 @@ class Modelos:
 
           
     def FitoneModel(self,X: pd.DataFrame, y: pd.Series, pipe: Pipeline ,nome: str):
-
+        """Treina somente um modelo dentre os que estão no objeto"""
         if nome not in self.models.keys():
             print('Modelo invalido')
             return
@@ -59,8 +62,8 @@ class Modelos:
 
 
     def FitModels(self, X: np.ndarray, y: np.array, pipe: Pipeline = None, log_y: bool = False) -> None:
-
-
+        """Treina todos os modelos inseridos no objeto através de validação cruzada"""
+		
         if len(self.models) == 0:
             return "Nenhum modelo adicionado na estrutura"
 
@@ -125,6 +128,7 @@ class Modelos:
         self._gerar_resultado()
 
     def _gerar_resultado(self) -> None:
+        """Gera os resultados em uma estrutura DataFrame"""
         
         indices = ['mae','mape','rmsle']
         display(pd.DataFrame(self.results,index=indices).T)
