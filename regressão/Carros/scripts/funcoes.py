@@ -1,8 +1,8 @@
-import seaborn as sns
+import seaborn           as sns
 import matplotlib.pyplot as plt
-import pandas as pd
+import pandas            as pd
 
-from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error, mean_squared_log_error
+from sklearn.metrics     import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error, mean_squared_log_error
 
 
 
@@ -13,10 +13,8 @@ def validacao(y_true,y_predicted,modelo = None):
 
     mape = mean_absolute_percentage_error(y_true, y_predicted)
 
-    try:
-        rmsle = mean_squared_log_error(y_true,y_predicted,squared=False)
-    except:
-        rmsle = -1
+    rmse = mean_squared_error(y_true,y_predicted,squared=False)
+
 
     fig, ax = plt.subplots(1,2,constrained_layout=True,figsize=(15,8))
 
@@ -43,7 +41,7 @@ def validacao(y_true,y_predicted,modelo = None):
  
 
 
-    texto = f"Modelo: {modelo}\n\n"+ f"MAE: {mae:.2f}\n\nMAPE: {mape:.2f}\n\nRMSLE: {rmsle:.2f}"
+    texto = f"Modelo: {modelo}\n\n"+ f"MAE: {mae:.2f}\n\nMAPE: {mape:.2f}\n\nRMSE: {rmse:.2f}"
     fig.text(1.01,0.76,texto,size=14,bbox=dict(boxstyle='square',ec= (0,0,0), fc= (9/255, 232/255, 102/255)))
 
     ax[1].legend()

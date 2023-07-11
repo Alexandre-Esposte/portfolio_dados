@@ -4,7 +4,7 @@ Bem-vindo(a) ao meu projeto de portfólio na área de Ciência de Dados! Neste t
 
 A base de dados foi obtida por meio de web scraping em concessionárias localizadas na Bielorrússia. Ela contém informações detalhadas sobre vários veículos, incluindo diversos atributos tais como quilometragem rodada, estado do veículo, ano de fabricação, cor do veículo, fabricante e entre muitos outros atributos. Nosso objetivo principal é desenvolver um modelo de predição capaz de aprender os padrões presentes nesses dados e fornecer estimativas precisas dos preços dos veículos com base em suas características.
 
-Esse projeto foi dividido em alguns arquivos, os arquivos de código estão no diretório scripts, nesses arquivos são definidas algumas funções e classes utilizadas para treinar e validar modelos de forma mais agil. Temos também dois notebooks sendo um deles voltado para a análise da base (analise.ipynb) e outro para modelagem (modelagem.ipynb).
+Esse projeto foi dividido em alguns arquivos, os arquivos de código estão no diretório scripts, nesses arquivos são definidas algumas funções e classes utilizadas para treinar e validar modelos de forma mais ágil. Temos também dois notebooks sendo um deles voltado para a análise da base (analise.ipynb) e outro para modelagem (modelagem.ipynb).
 
 # Contextualização
 
@@ -29,9 +29,10 @@ Estamos orgulhosos de destacar esse projeto em nosso portfólio, pois ele ilustr
 
 # Definições
 
-Antes de iniciarmos é necessário definirmos como os nossos modelos serão avaliados. Para esse projeto vamos utilizar as duas métricas a seguir:
+Antes de iniciarmos é necessário definirmos como os nossos modelos serão avaliados. Para esse projeto vamos utilizar as três métricas a seguir:
 
 1. **Mean absolute percentage error (MAPE)**
 2. **Mean absolute error (MAE)**
+3. **Root mean squared error (RMSE)**
 
-A nossa principal métrica sera o MAPE e tomaremos como erro aceitavel até no máximo 20%, entretanto o desejavel são erros menores que 15%. Além disso, esses erros são apenas uma estimativa através da média, almejamos uma análise mais aprofundada para podemos entender melhor os nossos modelos treinados.
+A nossa principal métrica sera o MAPE e tomaremos como erro aceitável até no máximo 20%, entretanto o desejável são erros menores que 15%. Além disso, esses erros são apenas uma estimativa através da média, almejamos uma análise mais aprofundada para podemos entender melhor os nossos modelos treinados.

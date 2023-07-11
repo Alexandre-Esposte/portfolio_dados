@@ -1,7 +1,7 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import numpy                 as np
+import pandas                as pd
+import matplotlib.pyplot     as plt
+import seaborn               as sns
 
 from sklearn.metrics 	     import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error, mean_squared_log_error
 from sklearn.compose 	     import ColumnTransformer
@@ -77,7 +77,7 @@ class Modelos:
 
             mae = 0
             mape = 0
-            rmsle = 0
+            rmse = 0
 
             resultados_aux = []
 
@@ -114,15 +114,12 @@ class Modelos:
                 
                 resultados_aux.append((y_test,predito)) 
                 
-                mae += mean_absolute_error(y_test,predito)
+                mae  += mean_absolute_error(y_test,predito)
                 mape += mean_absolute_percentage_error(y_test,predito)
-                try:
-                    rmsle += mean_squared_log_error(y_test,predito,squared=True)
-                except:
-                    pass
+                rmse += mean_squared_error(y_test,predito,squared=True)
 
                 #print(f"MAE: {mae:.2f} || MAPE: {mape:.2f} || RMSE: {rmse:.2f}")
-            self.results[nome_modelo]=[mae/5, mape/5, rmsle/5]
+            self.results[nome_modelo]=[mae/5, mape/5, rmse/5]
             self.results_per_fold[nome_modelo] = resultados_aux
 
         self._gerar_resultado()
@@ -130,7 +127,7 @@ class Modelos:
     def _gerar_resultado(self) -> None:
         """Gera os resultados em uma estrutura DataFrame"""
         
-        indices = ['mae','mape','rmsle']
+        indices = ['mae','mape','rmse']
         display(pd.DataFrame(self.results,index=indices).T)
     
 
