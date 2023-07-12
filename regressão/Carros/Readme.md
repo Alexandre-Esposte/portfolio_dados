@@ -36,3 +36,18 @@ Antes de iniciarmos é necessário definirmos como os nossos modelos serão aval
 3. **Root mean squared error (RMSE)**
 
 A nossa principal métrica sera o MAPE e tomaremos como erro aceitável até no máximo 20%, entretanto o desejável são erros menores que 15%. Além disso, esses erros são apenas uma estimativa através da média, almejamos uma análise mais aprofundada para podemos entender melhor os nossos modelos treinados.
+
+# Arquivos
+
+Esse projeto foi divido em dois notebooks e são eles:
+
+1. analise.ipynb
+
+ * Neste arquivo apresentamos uma breve análise dos dados onde buscamos por inconsistências nos dados e como as variáveis correlacionam-se com a variável alvo. Não exploramos afundo questões de análise visto que nosso foco é a modelagem.
+
+2. modelagem.ipynb
+
+ * Neste arquivo apresentamos todos os passos que utilizamos para modelar nosso modelo de machine learning.
+
+ Além disso temos os códigos funcoes.py e modelos.py no diretório  scripts. No primeiro apresentamos algumas funções utilizadas tanto na análise quanto na modelagem e no segundo trazemos uma classe que nos auxiliar a treinar e validar vários modelos ao mesmo tempo.
+
