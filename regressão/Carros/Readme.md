@@ -24,7 +24,7 @@ Ao implementar nossa solução de precificação, a ABC Automóveis agora pode t
 
 Com essa abordagem baseada em dados, nossos serviços de consultoria de dados trouxeram à ABC Automóveis uma melhoria significativa em sua capacidade de precificar carros usados.
 
-Estamos orgulhosos de destacar esse projeto em nosso portfólio, pois ele ilustra nossa capacidade de resolver desafios específicos da indústria, fornecendo soluções personalizadas e acionáveis. Nossa parceria com a ABC Automóveis exemplifica o poder da análise de dados para impulsionar o sucesso dos negócios e alcançar resultados reais no mercado automotivo.
+Estamos orgulhosos de destacar esse projeto em nosso portfólio, pois ele ilustra nossa capacidade de resolver desafios específicos da indústria, fornecendo soluções personalizadas. Nossa parceria com a ABC Automóveis exemplifica o poder da análise de dados para impulsionar o sucesso dos negócios e alcançar resultados reais no mercado automotivo.
 
 
 # Definições
