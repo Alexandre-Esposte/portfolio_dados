@@ -150,8 +150,6 @@ class KMeansScratch:
                 for cluster, indices in self.atribuicoes.items():
                     self._RecalculaCentroide(indices, matriz, cluster,cols)
 
-                #print(f"Centroide antigo : {centroide_antigo}")
-                #print(f'Centroide novo: {self.centroids}\n_____________-')
                 # Calculando a diferença entre os centroides atualizados e antigos
                 diff = self._DiferencaCentroides(centroide_antigo)
 
