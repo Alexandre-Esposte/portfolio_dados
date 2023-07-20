@@ -5,6 +5,7 @@ import pandas as pd
 class KMeansScratch:
 
     def __init__(self, n_clusters = 2, tol = 1e-5, rodadas=10):
+        """Método construtor"""
 
         self.n_clusters = n_clusters
 
@@ -38,7 +39,7 @@ class KMeansScratch:
         return soma_quadrado.sum()
 
 
-    def _IniciarCentroid(self,cols):
+    def _IniciarCentroid(self,cols: int) -> None:
         """Inicia os centroids aleatoriamente no intervalo [0,1]"""
 
         # Resetando os centroides
@@ -49,7 +50,7 @@ class KMeansScratch:
 
         
 
-    def _Distancia(self, vetor, centroide):
+    def _Distancia(self, vetor: np.array, centroide: np.array) -> float:
         '''Calcula a distância euclidiana entre dois vetores'''
         return np.sqrt(((vetor-centroide)**2).sum())
     
@@ -71,7 +72,7 @@ class KMeansScratch:
                 pass#print(f'Cluster {cluster} com divisao por zero')
 
 
-    def _DiferencaCentroides(self, centroide_antigo: list) -> float :
+    def _DiferencaCentroides(self, centroide_antigo: list) -> float:
         """Calcula a média do produto escalar de todos os centroides"""
         
         diferenca = []
@@ -98,6 +99,7 @@ class KMeansScratch:
             
 
     def fit(self,X: pd.DataFrame) -> list:
+        """Essa função é responsável por treinar o modelo"""
 
         rows = X.shape[0]
         cols = X.shape[-1]
